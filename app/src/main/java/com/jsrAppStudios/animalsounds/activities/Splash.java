@@ -1,9 +1,7 @@
 package com.jsrAppStudios.animalsounds.activities;
 
 import static com.jsrAppStudios.animalsounds.utils.Constants.SPLASH_TIMEOUT;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;

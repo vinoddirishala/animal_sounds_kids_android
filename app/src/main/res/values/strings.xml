@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Animal Sounds</string>
+    <string name="app_name">Animal Tones and &amp; Wallpapers</string>
+    <string name="version">version</string>
+
 </resources>

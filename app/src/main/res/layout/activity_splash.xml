@@ -9,7 +9,7 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".activities.Splash"
-    android:background="@color/splash_color">
+    android:background="@drawable/splash">
 
 
     <LinearLayout
@@ -24,17 +24,6 @@
             android:layout_gravity="center"
             android:layout_width="@dimen/twoHundredDP"
             android:layout_height="@dimen/twoHundredDP"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_marginTop="@dimen/twentyDP"
-            android:textSize="@dimen/twentyFiveSP"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:text="@string/app_name"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
 
     </LinearLayout>

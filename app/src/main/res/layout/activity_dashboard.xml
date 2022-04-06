@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/splash_color"
+    android:orientation="vertical"
+    android:background="@color/black"
     tools:context=".activities.Dashboard">
 
+    <include layout="@layout/dashboard_toolbar"/>
+
+
+    <LinearLayout
+        android:background="@drawable/curved_shape"
+        android:layout_marginTop="@dimen/tenDP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
 
-</RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

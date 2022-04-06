@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AnimalSounds">
         <activity
+            android:theme="@style/DarkNoActionBar"
             android:name=".activities.Dashboard"
             android:exported="false" />
         <activity

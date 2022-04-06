@@ -2,5 +2,11 @@
 <resources>
     <dimen name="twoHundredDP">200dp</dimen>
     <dimen name="twentyFiveSP">25sp</dimen>
+    <dimen name="twentyOneSP">21sp</dimen>
     <dimen name="twentyDP">20sp</dimen>
+    <dimen name="eighteenSP">18sp</dimen>
+    <dimen name="tenDP">10dp</dimen>
+    <dimen name="fifteenDP">15dp</dimen>
+    <dimen name="twentyFiveDP">25dp</dimen>
+    <dimen name="thirtyDP">30dp</dimen>
 </resources>

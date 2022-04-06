@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">Animal Tones and &amp; Wallpapers</string>
+    <string name="app_name">Animal Tones &amp; Wallpapers</string>
     <string name="version">version</string>
+    <string name="birds">Birds</string>
+    <string name="dom_animals">Domestic Animals</string>
+    <string name="insects">Insects</string>
+    <string name="water_mammals">Water Mammals</string>
+    <string name="wild_animals">Wild Animals</string>
+    <string name="rate">Rate us</string>
+    <string name="share">Share</string>
+    <string name="feedback">Give feedback</string>
+    <string name="more">More Apps</string>
 
 </resources>

@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="twoHundredDP">200dp</dimen>
+    <dimen name="oneFiftyDP">150dp</dimen>
+    <dimen name="oneTwentyFive">125dp</dimen>
+    <dimen name="seventyFiveDP">75dp</dimen>
+    <dimen name="fourtyFiveDP">45dp</dimen>
+    <dimen name="thirtyFiveDP">35dp</dimen>
     <dimen name="twentyFiveSP">25sp</dimen>
     <dimen name="twentyOneSP">21sp</dimen>
     <dimen name="twentyDP">20sp</dimen>
+    <dimen name="thirtySP">30sp</dimen>
     <dimen name="eighteenSP">18sp</dimen>
+    <dimen name="twelveSP">12sp</dimen>
+    <dimen name="fifteenSP">15sp</dimen>
     <dimen name="tenDP">10dp</dimen>
     <dimen name="fifteenDP">15dp</dimen>
     <dimen name="twentyFiveDP">25dp</dimen>
+    <dimen name="twenty">20dp</dimen>
     <dimen name="thirtyDP">30dp</dimen>
+    <dimen name="threeDP">3dp</dimen>
+    <dimen name="fiveDP">5dp</dimen>
 </resources>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/black"
     tools:context=".activities.Dashboard">
@@ -11,15 +11,35 @@
     <include layout="@layout/dashboard_toolbar"/>
 
 
-    <LinearLayout
-        android:background="@drawable/curved_shape"
-        android:layout_marginTop="@dimen/tenDP"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="@dimen/threeDP"
+            android:orientation="vertical"
+            android:background="@drawable/curved_shape"
+            android:layout_marginTop="@dimen/tenDP"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.tabs.TabLayout
+                app:tabTextColor="@color/white"
+                android:layout_marginTop="@dimen/twenty"
+                android:background="@color/splash_color"
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@android:color/white"
+                app:tabGravity="fill"
+                app:tabMode="scrollable"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
 
 
 
-
-    </LinearLayout>
 
 </LinearLayout>

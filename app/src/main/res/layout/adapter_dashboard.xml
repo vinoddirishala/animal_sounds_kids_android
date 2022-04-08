@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:id="@+id/card"
+    android:background="@drawable/curved_rect"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/twoHundredTwentyDP"
+            android:layout_height="@dimen/twoHundredTwentyDP">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/wallpaperImage"
+                android:src="@drawable/logo"
+                android:layout_width="@dimen/twoHundredDP"
+                android:layout_height="@dimen/twoHundredDP"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="-15dp"
+                android:layout_below="@+id/wallpaperImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/playSound"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_play"
+                    android:layout_width="@dimen/thirtyFiveDP"
+                    android:layout_height="@dimen/thirtyFiveDP"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:padding="@dimen/tenDP"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:weightSum="1"
+        android:layout_margin="@dimen/fiveDP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:maxEms="6"
+            android:ellipsize="end"
+            android:layout_weight="0.6"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/fifteenSP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:gravity="end"
+            android:layout_weight="0.4"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_marginEnd="@dimen/twentyDP"
+                android:layout_gravity="center"
+                android:id="@+id/downloadSoundAndWallPaper"
+                android:src="@drawable/ic_download"
+                android:layout_width="@dimen/twentyFiveDP"
+                android:layout_height="@dimen/twentyFiveDP"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/shareSoundAndWallpaper"
+                android:src="@drawable/ic_share"
+                android:layout_width="@dimen/twentyFiveDP"
+                android:layout_height="@dimen/twentyFiveDP"
+                app:tint="@color/white" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

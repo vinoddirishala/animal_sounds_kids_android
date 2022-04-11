@@ -3,13 +3,8 @@ package com.jsrAppStudios.animalsounds.adapters;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-import com.jsrAppStudios.animalsounds.Home;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.jsrAppStudios.animalsounds.fragments.Home;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
 

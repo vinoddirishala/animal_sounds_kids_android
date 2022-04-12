@@ -1,6 +1,7 @@
 package com.jsrAppStudios.animalsounds.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.jsrAppStudios.animalsounds.R;
+import com.jsrAppStudios.animalsounds.activities.Wallpaper;
 import com.jsrAppStudios.animalsounds.models.SoundsBean;
 import java.util.ArrayList;
 
@@ -55,7 +57,18 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
             }
         });
 
-
+        holder.wallpaper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mediaPlayer !=null){
+                    if (mediaPlayer.isPlaying()){
+                        mediaPlayer.stop();
+                    }
+                    mediaPlayer.release();
+                }
+                mContext.startActivity(new Intent(mContext, Wallpaper.class));
+            }
+        });
     }
 
     @Override

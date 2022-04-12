@@ -10,11 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AnimalSounds">
-
         <activity
-            android:theme="@style/NoActionBar"
-            android:name=".activities.SettingsActivity"
+            android:name=".activities.Wallpaper"
             android:exported="false" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".activities.Dashboard"
             android:exported="false"

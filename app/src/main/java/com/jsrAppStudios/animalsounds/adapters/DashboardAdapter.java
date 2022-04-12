@@ -1,12 +1,16 @@
 package com.jsrAppStudios.animalsounds.adapters;
 
 import android.content.Context;
+import android.media.MediaPlayer;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.jsrAppStudios.animalsounds.R;
@@ -17,6 +21,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
     Context mContext;
     ArrayList<SoundsBean> listOfSoundsAndWallpapers;
+    MediaPlayer mediaPlayer;
 
     public DashboardAdapter(Context mContext,ArrayList<SoundsBean> beanArrayList) {
         this.mContext = mContext;
@@ -35,6 +40,22 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
         SoundsBean soundsBean  = listOfSoundsAndWallpapers.get(position);
         holder.wallpaperTitle.setText(soundsBean.getName());
         holder.wallpaper.setImageResource(soundsBean.getWallpaper());
+        holder.playSound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (mediaPlayer != null){
+                    if (mediaPlayer.isPlaying()){
+                        mediaPlayer.stop();
+                    }
+                }
+                mediaPlayer = MediaPlayer.create(mContext,soundsBean.getSound());
+                mediaPlayer.start();
+
+            }
+        });
+
+
     }
 
     @Override
@@ -44,7 +65,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
     public class DashboardViewHolder extends RecyclerView.ViewHolder{
 
-        ImageView wallpaper;
+        ImageView wallpaper,playSound;
         ImageView shareIcon,downloadIcon;
         TextView wallpaperTitle;
         LinearLayout wallpaperCard;
@@ -56,6 +77,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
             shareIcon = itemView.findViewById(R.id.shareSoundAndWallpaper);
             downloadIcon = itemView.findViewById(R.id.downloadSoundAndWallPaper);
             wallpaper = itemView.findViewById(R.id.wallpaperImage);
+            playSound = itemView.findViewById(R.id.playSound);
 
         }
     }

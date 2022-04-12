@@ -56,19 +56,18 @@ public class Home extends Fragment {
     }
 
 
-
     private ArrayList<SoundsBean> getSoundsAndWallpapers(int pos){
         switch (pos){
             case 1:
                 return Constants.getBirdsBean();
             case 2:
-                return Constants.getBirdsBean();
+                return Constants.getDomAnimalsBean();
             case 3:
-                return Constants.getBirdsBean();
+                return Constants.getInsectsBean();
             case 4:
-                return Constants.getBirdsBean();
+                return Constants.getWaterMammalsBean();
             case 5:
-                return Constants.getBirdsBean();
+                return Constants.getWildAnimalsBean();
         }
         return null;
     }

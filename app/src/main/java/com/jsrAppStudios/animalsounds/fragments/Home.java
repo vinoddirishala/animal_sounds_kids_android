@@ -47,7 +47,7 @@ public class Home extends Fragment {
             bean = getSoundsAndWallpapers(pos);
             linearLayoutManager = new GridLayoutManager(getActivity(),2);
             listOfSoundsAndWallpapers.setLayoutManager(linearLayoutManager);
-            dashboardAdapter = new DashboardAdapter(getActivity(),bean);
+            dashboardAdapter = new DashboardAdapter(getActivity(),bean,pos);
             listOfSoundsAndWallpapers.setAdapter(dashboardAdapter);
         }
 

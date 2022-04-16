@@ -22,6 +22,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 startActivity(new Intent(Splash.this,Dashboard.class));
+                finish();
             }
         },SPLASH_TIMEOUT);
     }

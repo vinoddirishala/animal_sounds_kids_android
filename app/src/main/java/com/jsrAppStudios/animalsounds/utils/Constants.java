@@ -8,6 +8,8 @@ import java.util.ArrayList;
 public class Constants {
 
     public static int SPLASH_TIMEOUT = 1500;
+    public static String SELECTED_TAB = "selTab";
+    public static String SELECTED_WALLPAPER = "selWal";
 
     public static ArrayList<SoundsBean> getBirdsBean(){
         ArrayList<SoundsBean> birdsArray = new ArrayList<>();

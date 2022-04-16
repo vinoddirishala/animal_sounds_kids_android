@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.jsrAppStudios.animalsounds.R;
 import com.jsrAppStudios.animalsounds.activities.Wallpaper;
 import com.jsrAppStudios.animalsounds.models.SoundsBean;
+import com.jsrAppStudios.animalsounds.utils.Constants;
+
 import java.util.ArrayList;
 
 public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder> {
@@ -24,10 +26,12 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
     Context mContext;
     ArrayList<SoundsBean> listOfSoundsAndWallpapers;
     MediaPlayer mediaPlayer;
+    int selectedTabPosition = 0;
 
-    public DashboardAdapter(Context mContext,ArrayList<SoundsBean> beanArrayList) {
+    public DashboardAdapter(Context mContext,ArrayList<SoundsBean> beanArrayList, int tabPos) {
         this.mContext = mContext;
         this.listOfSoundsAndWallpapers = beanArrayList;
+        this.selectedTabPosition = tabPos;
     }
 
     @NonNull
@@ -66,7 +70,11 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
                     }
                     mediaPlayer.release();
                 }
-                mContext.startActivity(new Intent(mContext, Wallpaper.class));
+
+                Toast.makeText(mContext, "Pos "+holder.getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                mContext.startActivity(new Intent(mContext, Wallpaper.class)
+                        .putExtra(Constants.SELECTED_WALLPAPER,holder.getAdapterPosition())
+                        .putExtra(Constants.SELECTED_TAB,selectedTabPosition));
             }
         });
     }
